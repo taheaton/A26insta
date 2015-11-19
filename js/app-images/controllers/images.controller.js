@@ -4,6 +4,15 @@ let ImagesController = function(ImageService) {
 
   vm.images = [];
   vm.clicked = clicked;
+  vm.count = 0
+  vm.message = "";
+
+   vm.incrementByOne = function() {
+     vm.count++;
+     vm.message = (vm.count === 1) ? "Thank you for your submission.  We will contact you soon!" : "Thank you for your interest!";
+
+   };
+  
 
   activate();
 

@@ -4,13 +4,15 @@ let ImageService = function($http, PARSE) {
 
   this.getAllImages = getAllImages;
   this.addImage = addImage;
-  this.destroy = destroy;
+  this.like = like;
 
   function Image (imageObj) {
     this.name = imageObj.name;
     this.role = imageObj.role;
     this.pic = imageObj.pic;
     this.other = imageObj.other;
+    this.quote = imageObj.quote;
+    this.hobby = imageObj.hobby;
   }
 
   function getAllImages () {
@@ -22,9 +24,15 @@ let ImageService = function($http, PARSE) {
     return $http.post(url, c, PARSE.CONFIG);
   }
 
-  function destroy (name) {
-    return console.log(name + ' has been destroyed');
+  function like (obj) {
+    updateLikes(obj);
+    return console.log(obj);
   }
+  function updateLikes (obj) {
+    obj.likes = obj.likes + 1;
+    return $http.put(url + '/' + obj.objectId, obj, PARSE.CONFIG);
+  }
+
 
 
 };

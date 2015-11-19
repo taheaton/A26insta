@@ -8,14 +8,20 @@ let imageItem = function($state, ImageService) {
     },
     template: `
       <div class="panel">
-        <h5>{{ image.name }}</h5>
-        <p>{{ image.age }} {{ image.role }} {{ image.other }}</p>
-        <img src = "{{ image.pic }}"></img>
+        <h5>{{ image.role }}</h5>
+
+        <hr>
+        <p>Played by: {{ image.name }}</p>
+        <img ng-src="{{ image.pic }}">
+        <p>{{ image.quote }}</p>
+        <p>Likes: {{ image.likes }}</p>
+        <p>Also in: {{ image.other }}</p>
       </div>
     `,
     link: function (scope, element, attrs) {
       element.on('click', function () {
-        ImageService.destroy(scope.image.name);
+        element.addClass('heart');
+        ImageService.like(scope.image);
         //$state.go('root.singleImage', { id: scope.image.objectId });
       });
     }

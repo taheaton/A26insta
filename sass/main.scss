@@ -1,10 +1,15 @@
 // Put any @imports here
 // See Readme for a list of supported ones
 @import "foundation";
+@import "bourbon";
+@import "font-awesome";
 
 body {
   background: #e2ebf3;
   position: relative;
+  background: url('data:image/png;base64,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');
+ // background-repeat: repeat;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 }
 
 .container {
@@ -14,4 +19,59 @@ body {
 
 .panel {
   cursor: pointer;
+  height: 483px;
 }
+.panel img {
+  float: right;
+
+  max-width: 300px;
+  margin-top: -45px;
+  max-height: 400px;
+}
+img:hover {
+  opacity: 0.8;
+   
+}
+p {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+button {
+  opacity: 1.0;
+  text-align: center;
+}
+
+.heart {
+  background-image: url('http://www.clker.com/cliparts/j/2/R/Y/N/9/small-red-heart-with-transparent-background.svg');
+  background-position: center;
+  background-repeat: none;
+
+  }
+h3 {
+  color: white;
+}
+.homecontainer {
+  border: 1px solid black;
+    @include linear-gradient(to right, #74170f, #74170f, #981f13, #ab2218, #ab2218, #981f13, #74170f, #74170f);
+    display: inline-block;
+    top: 50pt;
+    border-radius: 10pt;
+}
+.imagecontainer {
+  border: 1px solid black;
+    @include linear-gradient(to right, #74170f, #74170f, #981f13, #ab2218, #ab2218, #981f13, #74170f, #74170f);
+    display: inline-block;
+    top: 50pt;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
