@@ -1,9 +1,10 @@
 ## Welcome to My Project
 
-> This is a Car Tracking Application which demonstrates a number of functions:
-- The user is taken to a login page upon entering the website.
+> This is a Fun 'instagram' app which demonstrates a number of functions:
+- The user is can view pictures of characters from the movie, The Godfather.
 - This site communicates api data with parse.com database.
-- The user can view cars in the database, add cars for the database, and also, view a detailed list and 'schedule maintenance for the cars.
+- The user can view pictures in the database, 'like' the pictures and track how many likes the different characters have received in the database.
+- The user can also add characters for the database.
 
 
 ## Usage
